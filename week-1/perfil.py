@@ -1,4 +1,10 @@
-informações = input('Digite seu nome, sua idade e a cidade onde você mora:\n').split(', ')
+nome = input('Digite seu nome: ')
+idade = input("Digite a sua idade: ")
+cidade = input("Digite a cidade: ")
 
-print(f'Seu nome é {informações[0]}, sua idade é {informações[1]} e a cidade atual é '\
-      f'{informações[2]}.')
+def imprimi_nome():
+    print(f'Seu nome é {nome}\n' \
+          f'Sua idade é {idade}\n' \
+          f'Sua Cidade atual é {cidade}')
+
+imprimi_nome()
