@@ -1,18 +1,18 @@
-#! /usr/bin/env python3
 import os
 from dotenv import load_dotenv
 import psycopg2
 
-load_dotenv()
 
 try:
-    # Parâmetros de conexão
+
+    load_dotenv()
+
     conn = psycopg2.connect(
         database=os.getenv("DATABASE"),
-        user=os.getenv("USER"),
-        password=os.getenv("PASSWORD"),
-        host=os.getenv("HOST"),
-        port=os.getenv("PORT")
+        user=os.getenv("USER_DB"),
+        password=os.getenv("PASSWORD_DB"),
+        host=os.getenv("HOST_DB"),
+        port=os.getenv("PORT_DB")
     )
 
     print("Conexão bem-sucedida!")
@@ -22,7 +22,7 @@ try:
 except psycopg2.Error as e:
     print(f"Erro ao conectar ao banco de dados: {e}")
 finally:
-    if conn:
+   if conn:
         conn.close() # Fechar a conexão ao final
         print("Conexão fechada.")
 
