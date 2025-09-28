@@ -124,3 +124,10 @@ pip install --upgrade pip
 Passar por esses três erros pode parecer uma jornada árdua, mas cada um deles nos ensina uma lição valiosa sobre como nosso ambiente de desenvolvimento funciona: a importância das dependências de compilação, a realidade das falhas de rede e, mais importante, a diferença crucial entre o Python do sistema e o nosso ambiente de desenvolvimento isolado.
 
 Agora você não só resolveu o problema, mas também compreendeu as causas, tornando-se um desenvolvedor mais preparado. Bom trabalho e bons códigos\!
+
+## OBS
+
+Podemos resolver esse problema de outra forma, CTRL + Shif + p digite "Select Interpreter", 
+selecione "python,defaultInterpreterPath", isso vai configurar o VSCode para usar o caminho, 
+"/bin/python3" onde está os arquivos binários do python, após isso ele vai pedir para configurar
+o ambiente virtual do python, que no caso seria o que você configurou com "python -m venv .venv".
