@@ -1,11 +1,12 @@
 from fastapi import FastAPI
+from db import search_posts
 
 
 app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return search_posts
 
 @app.get("/items/{item_id}")
 async def read_item(item_id):
