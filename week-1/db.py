@@ -21,13 +21,15 @@ def search_posts():
         posts = cur.fetchall()
                 
         cur.close()
+        conn.close()
         
         return posts
     
     except psycopg2.Error as e:
         print(f"Erro ao conectar ao banco de dados: {e}")
     finally:
-        
+        if conn:
+            conn.close()
         print("Conexão fechada.")
 
 if __name__ == "__main__":
